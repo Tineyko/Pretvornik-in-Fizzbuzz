@@ -254,18 +254,22 @@ def f_k():
 
 def fizzbuzz():
     print "Vnesi število med 1 in 100 za super izpis :) "
-    izbira = raw_input()
-    if not re.match("^[0-9]*$", izbira) and 0 <= int(izbira) <= 100:
-        print "SAMO ŠTEVILKE PROSIM!!! \n"
-    for izbira in range(1, int(izbira)+1):
-        if izbira % 3 == 0 and izbira % 5 == 0:
-            print "fizzbuzz"
-        elif izbira % 3 == 0:
-            print "fizz"
-        elif izbira % 5 == 0:
-            print "buzz"
+    while True:
+        izbira = raw_input()
+        if not re.match("^[0-9]*$", izbira):
+            print "SAMO ŠTEVILKE PROSIM!!! \n"
+        elif 0 <= int(izbira) <= 100:
+            for izbira in range(1, int(izbira)+1):
+                if izbira % 3 == 0 and izbira % 5 == 0:
+                    print "FizzBuzz"
+                elif izbira % 3 == 0:
+                    print "Fizz"
+                elif izbira % 5 == 0:
+                    print "Buzz"
+                else:
+                    print izbira
         else:
-            print izbira
+            print "SAMO ŠTEVILKE MED 1 IN 100 PROSIM!!! \n"
 
 def main():
     while True:
