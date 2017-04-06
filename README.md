@@ -1,1 +1,1 @@
-# Pretvornik-in-Fizzbuzz
+# Pretvornik enot in Fizzbuzz
